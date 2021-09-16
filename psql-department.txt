@@ -1,0 +1,12 @@
+create table Department(
+id serial primary key,
+name_department varchar(60) not null unique
+);
+
+create table Employee(
+id serial primary key,
+name varchar(50) not null unique
+department_id integer references Department(id)
+chief integer references Employee(id)
+);
+
